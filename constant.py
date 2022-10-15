@@ -1,1 +1,1 @@
-ORIGINAL_FILENAME = 'original.wav'
+ORIGINAL_VIDEO_URL = 'data/original.wav'

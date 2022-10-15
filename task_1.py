@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import constant
 
 # Prepare the data
-data, sample_rate = util.reader(constant.ORIGINAL_FILENAME)
+data, sample_rate = util.reader(constant.ORIGINAL_VIDEO_URL)
 # Prepare the figure
 fig = plt.figure(figsize=(10, 10))
 # Plot the time domain

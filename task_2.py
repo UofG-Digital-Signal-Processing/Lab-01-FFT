@@ -55,7 +55,7 @@ def get_consonant_frequency():
 
 vowel_frequency = get_vowel_frequency()
 consonant_frequency = get_consonant_frequency()
-original_data, sample_rate = util.reader(constant.ORIGINAL_FILENAME)
+original_data, sample_rate = util.reader(constant.ORIGINAL_VIDEO_URL)
 # fig = plt.figure(figsize=(10, 10))
 # Plot the frequency domain
 # fig.add_subplot(2, 1, 2)
