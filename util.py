@@ -86,9 +86,14 @@ def cal_frequency_domain(data, sample_rate):
 
     frequency = np.fft.fftfreq(data.size, d=1.0 / sample_rate)  # 频率
     frequency = frequency[:int(len(frequency) / 2)]  # 由于对称性，只取一半区间
-
     amplitude = np.abs(ft)  # 取绝对值
     amplitude = amplitude[:int(len(amplitude) / 2)]  # 由于对称性，只取一半区间
+    return frequency, amplitude
+
+
+def cal_frequency_domain_db(data, sample_rate):
+    frequency, amplitude = cal_frequency_domain(data, sample_rate)
+    amplitude = 20 * np.log10(amplitude)
     return frequency, amplitude
 
 
@@ -101,32 +106,12 @@ def plot_time_domain(data, sample_rate):
     plt.show()
 
 
-def plot_frequency_domain(data, sample_rate):
-    ft = np.fft.fft(data)  # 傅里叶变换
-
-    frequency = np.fft.fftfreq(data.size, d=1.0 / sample_rate)  # 频率
-    frequency = frequency[:int(len(frequency) / 2)]  # 由于对称性，只取一半区间
-
-    amplitude = np.abs(ft)  # 取绝对值
-    amplitude = amplitude[:int(len(amplitude) / 2)]  # 由于对称性，只取一半区间
-
+def plot_frequency_domain(frequency, amplitude):
     plt.plot(frequency, amplitude)
     plt.xlabel('Frequency')
     plt.ylabel('Amplitude')
     plt.show()
 
 
-def plot_frequency_domain_db(data, sample_rate):
-    ft = np.fft.fft(data)  # 傅里叶变换
-
-    frequency = np.fft.fftfreq(data.size, d=1.0 / sample_rate)  # 频率
-    frequency = frequency[:int(len(frequency) / 2)]  # 由于对称性，只取一半区间
-
-    amplitude = np.abs(ft)  # 取绝对值
-    amplitude = 20 * np.log10(amplitude)
-    amplitude = amplitude[:int(len(amplitude) / 2)]  # 由于对称性，只取一半区间
-
-    plt.plot(frequency, amplitude)
-    plt.xlabel('Frequency')
-    plt.ylabel('Amplitude')
-    plt.show()
+def _db():
+    pass
