@@ -3,7 +3,7 @@ import os
 import matplotlib.pyplot as plt
 
 
-base_path = "data/consonant"
+base_path = "data/vowel"
 filenames = os.listdir(base_path)
 
 for filename in filenames:
