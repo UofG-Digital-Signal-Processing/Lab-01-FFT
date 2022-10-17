@@ -1,10 +1,10 @@
-import pyaudio
-import librosa
-from scipy.io import wavfile
 import wave
-import soundfile as sf
-import numpy as np
+
 import matplotlib.pyplot as plt
+import numpy as np
+import pyaudio
+import soundfile as sf
+from scipy.io import wavfile
 
 PLAYER_CHUNK = 1024
 

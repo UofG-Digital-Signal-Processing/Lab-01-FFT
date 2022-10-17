@@ -1,10 +1,20 @@
 ## Task 2
 
-According to the topic description, the peaks of frequency of vowels, the range of frequency of consonants and the whole range of frequency of voice, including vowels and consonants, should be plotted in the figures of Task 1.
+According to the topic description, the peaks of frequency of vowels, the range of frequency of consonants and the whole
+range of frequency of voice, including vowels and consonants, should be plotted in the figures of Task 1.
 
-First of all, For vowel detection, a reasonable method is formant. The muscles of the human vocal organs are softer and have greater damping, and will resonate more frequencies; the resonance vibrates the resonant cavity, and then the vocal tract will amplify some frequency components and attenuate other frequency components, resulting in For some resonant frequencies, the resonant frequencies that are amplified in frequency characteristics will peak one after another. Generally, these resonant frequencies are called resonant frequencies, and these peaks are called resonant peaks. Since the voiced sound is produced by the vibration of the vocal cords, the voiced sound is closely related to the formant, and it can be considered that the formant is the vowel. In most cases, the first two formants, $f_1$ and $f_2$, are sufficient to separate the different vowels.
+First of all, For vowel detection, a reasonable method is formant. The muscles of the human vocal organs are softer and
+have greater damping, and will resonate more frequencies; the resonance vibrates the resonant cavity, and then the vocal
+tract will amplify some frequency components and attenuate other frequency components, resulting in For some resonant
+frequencies, the resonant frequencies that are amplified in frequency characteristics will peak one after another.
+Generally, these resonant frequencies are called resonant frequencies, and these peaks are called resonant peaks. Since
+the voiced sound is produced by the vibration of the vocal cords, the voiced sound is closely related to the formant,
+and it can be considered that the formant is the vowel. In most cases, the first two formants, $f_1$ and $f_2$, are
+sufficient to separate the different vowels.
 
-However, for consonants, the characteristics of formants are not significant, so it is not suitable to use such methods to calculate, but due to time constraints, other more suitable methods have not been adopted, and the range of frequency can only be roughly determined by the trend of the directly observed image.
+However, for consonants, the characteristics of formants are not significant, so it is not suitable to use such methods
+to calculate, but due to time constraints, other more suitable methods have not been adopted, and the range of frequency
+can only be roughly determined by the trend of the directly observed image.
 
 ### Mark the vowel frequencey peak in the spectrum of original audio
 
@@ -18,7 +28,8 @@ However, for consonants, the characteristics of formants are not significant, so
        return data, sample_rate
    ```
 
-1. Use function `signal.find_peaks` to roughly search 2-3 frequency peaks of every vowel, which called formant is the significant feature of vowel.
+1. Use function `signal.find_peaks` to roughly search 2-3 frequency peaks of every vowel, which called formant is the
+   significant feature of vowel.
 
    ```python
    def cal_vowel_frequency_peak():
@@ -41,7 +52,9 @@ However, for consonants, the characteristics of formants are not significant, so
        return vowel_frequency_peaks
    ```
 
-1. Mark the above peaks in the spectrum of original audio, but due to precision issues, it is likely that there is no corresponding frequency in the spectrum, so the function `np.searchsorted` needs to be used for nearest matching during processing.
+1. Mark the above peaks in the spectrum of original audio, but due to precision issues, it is likely that there is no
+   corresponding frequency in the spectrum, so the function `np.searchsorted` needs to be used for nearest matching
+   during processing.
 
    ```python
    def mark_vowel_frequency_peak():
@@ -95,7 +108,9 @@ However, for consonants, the characteristics of formants are not significant, so
        return consonant_frequency_range
    ```
 
-1. Mark the above range in the spectrum of original audio, but due to precision issues, it is likely that there is no corresponding frequency in the spectrum, so the function `np.searchsorted` needs to be used for nearest matching during processing.
+1. Mark the above range in the spectrum of original audio, but due to precision issues, it is likely that there is no
+   corresponding frequency in the spectrum, so the function `np.searchsorted` needs to be used for nearest matching
+   during processing.
 
    ```python
    def mark_consonant_frequency_range():
@@ -139,7 +154,9 @@ However, for consonants, the characteristics of formants are not significant, so
        plt.show()
    ```
 
-1. Mark both of vowel and consonant frequency range in the spectrum of original audio, but due to precision issues, it is likely that there is no corresponding frequency in the spectrum, so the function `np.searchsorted` needs to be used for nearest matching during processing.
+1. Mark both of vowel and consonant frequency range in the spectrum of original audio, but due to precision issues, it
+   is likely that there is no corresponding frequency in the spectrum, so the function `np.searchsorted` needs to be
+   used for nearest matching during processing.
 
    ```python
    def mark_vowel_and_consonant_frequency_range():

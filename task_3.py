@@ -1,4 +1,5 @@
 import numpy as np
+
 import util
 
 INPUT_FILENAME = 'original.wav'
@@ -14,7 +15,8 @@ def increase_voice_quality(data, sample_rate, amplification):
     frequency = np.fft.fftfreq(data.size, d=1.0 / sample_rate)  # 频率
     amplitude = np.copy(ft)
     # determine the region of the highest harmonic voice frequencies in the spectrum
-    frequency_scope = np.where((LOWEST_HARMONIC_VOICE_FREQUENCY < frequency) & (frequency < HIGHEST_HARMONIC_VOICE_FREQUENCY))
+    frequency_scope = np.where(
+        (LOWEST_HARMONIC_VOICE_FREQUENCY < frequency) & (frequency < HIGHEST_HARMONIC_VOICE_FREQUENCY))
 
     amplitude[frequency_scope] *= amplification
     # inverse Fourier transform

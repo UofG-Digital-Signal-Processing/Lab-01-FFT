@@ -1,9 +1,11 @@
-import util
 import os
-import scipy.signal as signal
-import constant
+
 import matplotlib.pyplot as plt
 import numpy as np
+import scipy.signal as signal
+
+import constant
+import util
 
 original_data, original_sample_rate = util.reader(constant.ORIGINAL_VIDEO_URL)
 original_time, original_time_amplitude = util.cal_time_domain(original_data, original_sample_rate)
@@ -89,7 +91,8 @@ def mark_vowel_frequency_range():
     for range_item in vowel_frequency_range:
         # Determine the range of the vowel frequency in the original audio frequency
         range_idx = np.searchsorted(original_frequency, range_item)
-        plt.plot(original_frequency[range_idx], original_frequency_amplitude[range_idx], 'r.', label='Consonant Frequency Range')
+        plt.plot(original_frequency[range_idx], original_frequency_amplitude[range_idx], 'r.',
+                 label='Consonant Frequency Range')
     plt.title('Vowel Frequency Frequency in Original Audio')
     plt.xlabel('Frequency (log)')
     plt.ylabel('Amplitude (dB)')
@@ -104,7 +107,8 @@ def mark_consonant_frequency_range():
     for range_item in consonant_frequency_range:
         # Determine the range of the consonant frequency in the original audio frequency
         range_idx = np.searchsorted(original_frequency, range_item)
-        plt.plot(original_frequency[range_idx], original_frequency_amplitude[range_idx], 'r.', label='Consonant Frequency Range')
+        plt.plot(original_frequency[range_idx], original_frequency_amplitude[range_idx], 'r.',
+                 label='Consonant Frequency Range')
     plt.title('Consonant Frequency Range in Original Audio')
     plt.xlabel('Frequency (log)')
     plt.ylabel('Amplitude (dB)')
@@ -117,7 +121,8 @@ def mark_vowel_and_consonant_frequency_range():
     plt.plot(original_frequency, original_frequency_amplitude)
     for range_item in frequency_range:
         range_idx = np.searchsorted(original_frequency, range_item)
-        plt.plot(original_frequency[range_idx], original_frequency_amplitude[range_idx], 'r.', label='Vowel and Consonant Frequency Range')
+        plt.plot(original_frequency[range_idx], original_frequency_amplitude[range_idx], 'r.',
+                 label='Vowel and Consonant Frequency Range')
     plt.title('Vowel and Consonant Frequency Range in Original Audio')
     plt.xlabel('Frequency (log)')
     plt.ylabel('Amplitude (dB)')

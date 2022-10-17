@@ -1,8 +1,8 @@
+import matplotlib.pyplot as plt
 import numpy as np
 
-import util
-import matplotlib.pyplot as plt
 import constant
+import util
 
 # Prepare the data
 data, sample_rate = util.reader(constant.ORIGINAL_VIDEO_URL)
