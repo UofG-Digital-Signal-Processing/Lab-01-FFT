@@ -139,6 +139,8 @@ def plot_freqdomain_enhance(wavefile, start, end, multiple):
     freq_mag_rec[total_samples - pos_y: total_samples - pos_x] = freq_mag_rec[
                                                                  total_samples - pos_y: total_samples - pos_x] * multiple
 
+    amp_rec = np.fft.ifft(freq_mag_rec)
+
     freq_mag_norm = freq_mag_rec / total_samples
     freq_mag_abs = np.abs(freq_mag_norm)
     freq_mag_abs_plt = 2 * freq_mag_abs[:int(total_samples / 2) + 1]
@@ -155,7 +157,7 @@ def plot_freqdomain_enhance(wavefile, start, end, multiple):
 
     # wavfile.write("enhanced.wav", 44100, np.float32(amp_rec))
     # display all of the graphs for the signal
-
+    wavfile.write("enhanced1.wav", 44100, np.float32(amp_rec))
     plt.show()
 
 
