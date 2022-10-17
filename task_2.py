@@ -81,7 +81,9 @@ def mark_vowel_frequency_peak():
     plt.title('Vowel Frequency Peak in Original Audio')
     plt.xlabel('Frequency (log)')
     plt.ylabel('Amplitude (dB)')
-    plt.show()
+    # plt.show()
+    plt.savefig('res/task_2_a.svg')
+    plt.close()
 
 
 def mark_vowel_frequency_range():
@@ -96,7 +98,9 @@ def mark_vowel_frequency_range():
     plt.title('Vowel Frequency Frequency in Original Audio')
     plt.xlabel('Frequency (log)')
     plt.ylabel('Amplitude (dB)')
-    plt.show()
+    # plt.show()
+    plt.savefig('res/task_2_b.svg')
+    plt.close()
 
 
 # Mark the frequency range of consonant in original video
@@ -112,7 +116,9 @@ def mark_consonant_frequency_range():
     plt.title('Consonant Frequency Range in Original Audio')
     plt.xlabel('Frequency (log)')
     plt.ylabel('Amplitude (dB)')
-    plt.show()
+    # plt.show()
+    plt.savefig('res/task_2_b.svg')
+    plt.close()
 
 
 # Mark the frequency range of vowel and consonant in original video
@@ -126,7 +132,8 @@ def mark_vowel_and_consonant_frequency_range():
     plt.title('Vowel and Consonant Frequency Range in Original Audio')
     plt.xlabel('Frequency (log)')
     plt.ylabel('Amplitude (dB)')
-    plt.show()
+    # plt.show()
+    plt.savefig('res/task_2_c.svg')
 
 
 mark_vowel_frequency_peak()
