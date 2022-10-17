@@ -45,7 +45,7 @@ def formant_cepst(u, cepst_l):
     return val, loc, spec
 
 
-def vowel_detect(wavfile):
+def detect_vowel(wavfile):
     path1 = constant.VOWEL_A_VIDEO_PATH
     path2 = constant.VOWEL_AE_VIDEO_PATH
     path3 = wavfile

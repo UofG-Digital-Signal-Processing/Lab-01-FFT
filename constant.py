@@ -1,4 +1,5 @@
 ORIGINAL_VIDEO_URL = 'original.wav'
+IMPROVED_VIDEO_URL = 'improved.wav'
 VOWEL_VIDEO_BASE_PATH = 'data/vowel'
 CONSONANT_VIDEO_BASE_PATH = 'data/consonant'
 VOWEL_A_VIDEO_PATH = 'data/vowel/a:.wav'
