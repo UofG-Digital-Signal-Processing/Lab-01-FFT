@@ -72,7 +72,7 @@ can only be roughly determined by the trend of the directly observed image.
 
 #### Result
 
-![image-20221017215243909](https://chrisgray.oss-cn-beijing.aliyuncs.com/Imageshack/image-20221017215243909.png)
+![task_2_a](https://chrisgray.oss-cn-beijing.aliyuncs.com/Imageshack/task_2_a.svg)
 
 ### Mark the frequency consonant range in the spectrum of original audio
 
@@ -129,7 +129,7 @@ can only be roughly determined by the trend of the directly observed image.
 
 #### Result
 
-![image-20221017215255281](https://chrisgray.oss-cn-beijing.aliyuncs.com/Imageshack/image-20221017215255281.png)
+![task_2_b](https://chrisgray.oss-cn-beijing.aliyuncs.com/Imageshack/task_2_b.svg)
 
 ### Mark the whole speech spectrum including the vowels and consonants
 
@@ -173,4 +173,4 @@ can only be roughly determined by the trend of the directly observed image.
 
 #### Result
 
-![image-20221017220517996](https://chrisgray.oss-cn-beijing.aliyuncs.com/Imageshack/image-20221017220517996.png)
+![task_2_c](https://chrisgray.oss-cn-beijing.aliyuncs.com/Imageshack/task_2_c.svg)
