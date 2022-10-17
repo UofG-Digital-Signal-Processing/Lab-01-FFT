@@ -23,5 +23,4 @@ frequency = np.log10(frequency)
 plt.plot(frequency, amplitude)
 plt.xlabel('Frequency')
 plt.ylabel('Amplitude')
-
 plt.show()
