@@ -52,7 +52,6 @@ def writer(filename, data, sample_rate):
 
 def reader(filename):
     sample_rate, data = wavfile.read(filename)
-    # data, sample_rate = sf.read(filename)
     return data, sample_rate
 
 
