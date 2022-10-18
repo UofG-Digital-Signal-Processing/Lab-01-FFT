@@ -383,6 +383,8 @@ The vowel is ae  according to the vowel detector
 
 ##  Appendix:
 
+Here is the GitHub repository link of this project: https://github.com/DSP-Lab-Group/DSP-Lab-1
+
 ###### task_1.py:
 
 ```python
