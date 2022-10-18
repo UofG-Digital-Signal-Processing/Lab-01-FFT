@@ -1,6 +1,8 @@
 ### ENG5027 Assesment 1
 
-###### Team Members: Jinming Zhang, Xiaohui Yu, Jianyu Zhao, Ziyuan Cheng
+###### Team Members: Jinming Zhang (2639212z), Xiaohui Yu (2784582y), Jianyu Zhao (2721815z), Ziyuan Cheng (2786151c)
+
+
 
 ## Task 1: Loading Audio into Python
 
@@ -42,23 +44,18 @@
 
 ![Amplitude_vs_Frequency](./res/task_1_b.svg)
 
+<div style="page-break-after:always"></div>
+
 ## Task 2: Audio Analysis
 
 According to the topic description, the peaks of frequency of vowels, the range of frequency of consonants and the whole
 range of frequency of voice, including vowels and consonants, should be plotted in the figures of Task 1.
 
-First of all, For vowel detection, a reasonable method is formant. The muscles of the human vocal organs are softer and
-have greater damping, and will resonate more frequencies; the resonance vibrates the resonant cavity, and then the vocal
-tract will amplify some frequency components and attenuate other frequency components, resulting in For some resonant
-frequencies, the resonant frequencies that are amplified in frequency characteristics will peak one after another.
-Generally, these resonant frequencies are called resonant frequencies, and these peaks are called resonant peaks. Since
-the voiced sound is produced by the vibration of the vocal cords, the voiced sound is closely related to the formant,
-and it can be considered that the formant is the vowel. In most cases, the first two formants, $f_1$ and $f_2$, are
-sufficient to separate the different vowels.
+First of all, For vowel detection, a reasonable method is formant. The muscles of the human vocal organs are softer and have greater damping, and will resonate more frequencies; the resonance vibrates the resonant cavity, and then the vocal tract will amplify some frequency components and attenuate other frequency components, resulting in For some resonant frequencies, the resonant frequencies that are amplified in frequency characteristics will peak one after another.
 
-However, for consonants, the characteristics of formants are not significant, so it is not suitable to use such methods
-to calculate, but due to time constraints, other more suitable methods have not been adopted, and the range of frequency
-can only be roughly determined by the trend of the directly observed image.
+Generally, these resonant frequencies are called resonant frequencies, and these peaks are called resonant peaks. Since the voiced sound is produced by the vibration of the vocal cords, the voiced sound is closely related to the formant, and it can be considered that the formant is the vowel. In most cases, the first two formants, $f_1$ and $f_2$, are sufficient to separate the different vowels.
+
+However, for consonants, the characteristics of formants are not significant, so it is not suitable to use such methods to calculate, but due to time constraints, other more suitable methods have not been adopted, and the range of frequency can only be roughly determined by the trend of the directly observed image.
 
 #### I. Mark the vowel frequencey peak in the spectrum of original audio
 
@@ -72,9 +69,8 @@ can only be roughly determined by the trend of the directly observed image.
        return data, sample_rate
    ```
 
-1. Use function `signal.find_peaks` to roughly search 2-3 frequency peaks of every vowel, which called formant is the
-   significant feature of vowel.
-
+1. Use function `signal.find_peaks` to roughly search 2-3 frequency peaks of every vowel, which called formant is the significant feature of vowel.
+   
    ```python
    def cal_vowel_frequency_peak():
        base_path = constant.VOWEL_VIDEO_BASE_PATH
@@ -95,11 +91,9 @@ can only be roughly determined by the trend of the directly observed image.
                vowel_frequency_peaks.append(np.log10(frequency[peak_idx]))
        return vowel_frequency_peaks
    ```
-
-1. Mark the above peaks in the spectrum of original audio, but due to precision issues, it is likely that there is no
-   corresponding frequency in the spectrum, so the function `np.searchsorted` needs to be used for nearest matching
-   during processing.
-
+   
+1. Mark the above peaks in the spectrum of original audio, but due to precision issues, it is likely that there is no corresponding frequency in the spectrum, so the function `np.searchsorted` needs to be used for nearest matching during processing.
+   
    ```python
    def mark_vowel_frequency_peak():
        vowel_frequency_peaks = cal_vowel_frequency_peak()
@@ -116,7 +110,7 @@ can only be roughly determined by the trend of the directly observed image.
 
 #### Result:
 
-![task_2_a](./res/task_2_a.svg)
+<img src="./res/task_2_a.svg" alt="task_2_a" style="width:67%;" />
 
 #### II. Mark the frequency consonant range in the spectrum of original audio
 
@@ -152,10 +146,8 @@ can only be roughly determined by the trend of the directly observed image.
        return consonant_frequency_range
    ```
 
-1. Mark the above range in the spectrum of original audio, but due to precision issues, it is likely that there is no
-   corresponding frequency in the spectrum, so the function `np.searchsorted` needs to be used for nearest matching
-   during processing.
-
+1. Mark the above range in the spectrum of original audio, but due to precision issues, it is likely that there is no corresponding frequency in the spectrum, so the function `np.searchsorted` needs to be used for nearest matching during processing.
+   
    ```python
    def mark_consonant_frequency_range():
        consonant_frequency_range = cal_consonant_frequency_range()
@@ -173,7 +165,7 @@ can only be roughly determined by the trend of the directly observed image.
 
 #### Result:
 
-![task_2_b](./res/task_2_b.svg)
+<img src="./res/task_2_b.svg" alt="task_2_b" style="width:67%;" />
 
 #### III. Mark the whole speech spectrum including the vowels and consonants
 
@@ -198,10 +190,8 @@ can only be roughly determined by the trend of the directly observed image.
        plt.show()
    ```
 
-1. Mark both of vowel and consonant frequency range in the spectrum of original audio, but due to precision issues, it
-   is likely that there is no corresponding frequency in the spectrum, so the function `np.searchsorted` needs to be
-   used for nearest matching during processing.
-
+1. Mark both of vowel and consonant frequency range in the spectrum of original audio, but due to precision issues, it is likely that there is no corresponding frequency in the spectrum, so the function `np.searchsorted` needs to be used for nearest matching during processing.
+   
    ```python
    def mark_vowel_and_consonant_frequency_range():
        frequency_range = np.append(cal_consonant_frequency_range(), cal_vowel_frequency_range())
@@ -218,6 +208,8 @@ can only be roughly determined by the trend of the directly observed image.
 #### Result:
 
 ![task_2_c](./res/task_2_c.svg)
+
+<div style="page-break-after:always"></div>
 
 ## Task 3: Fourier Transform
 
@@ -257,11 +249,11 @@ As can be seen from the figures, the audio will drop significantly from 1000Hz o
 
 ##### Vowel: 
 
-![vowels](./res/vowels.svg)
+<img src="./res/vowels.svg" alt="vowels" style="width:50%;" />
 
 ##### Consonant:
 
-![consonants](./res/consonants.svg)
+<img src="./res/consonants.svg" alt="consonants" style="width:50%;" />
 
 2. The highest vowel peak is further away from the second highest peak, while the consonant peak is closer together.
 
@@ -271,16 +263,16 @@ As can be seen from the figures, the audio will drop significantly from 1000Hz o
 
 FYI: Please see the code in Appendix: Task 3
 
+<div style="page-break-after:always"></div>
+
 ## Task 4: Vowel Detector
 
 #### Steps
 
-1. Pre-emphasis of the speech signal x with windowing and FFT processing.The window function is a Hamming window
-   with a length of 320. the sound sampling frequency is 8000Hz, and the FFT length defaults to 65536.  
+1. Pre-emphasis of the speech signal x with windowing and FFT processing.The window function is a Hamming window with a length of 320. the sound sampling frequency is 8000Hz, and the FFT length defaults to 65536.  
 2. Taking the inverse spectrum of X ( k ).  
 3. Window-added to the cepstrum signal.
-4. Find the envelope and find the extreme values on the envelope to obtain the corresponding resonance peak
-   parameters.  
+4. Find the envelope and find the extreme values on the envelope to obtain the corresponding resonance peak parameters.  
 5. Comparing known resonance peaks with files of speech.  
 6. Output string.
 
@@ -387,9 +379,7 @@ if __name__ == '__main__':
 The vowel is ae  according to the vowel detector
 ```
 
-
-
-
+<div style="page-break-after:always"></div>
 
 ##  Appendix:
 
