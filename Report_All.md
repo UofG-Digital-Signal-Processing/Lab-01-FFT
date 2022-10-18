@@ -227,27 +227,27 @@ can only be roughly determined by the trend of the directly observed image.
 
  Below is a spectrum of the sound of vowel “a”.
 
-![图表  描述已自动生成](file:////Users/chengziyuan/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image001.jpg)
+![a](./res/vowel_a.svg)
 
 Below is a spectrum of the sound of vowel “e”.
 
-![图表  描述已自动生成](file:////Users/chengziyuan/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image002.jpg)
+![e](./res/vowel_e.svg)
 
 Below is a spectrum of the sound of vowel “i”.
 
-![图表, 折线图  描述已自动生成](file:////Users/chengziyuan/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image003.jpg)
+![i](./res/vowel_i.svg)
 
 Below is a spectrum of the sound of vowel “o”.
 
-![图表, 折线图  描述已自动生成](file:////Users/chengziyuan/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image004.jpg)
+![o](./res/vowel_o.svg)
 
 Below is a spectrum of the sound of consonant “b”.
 
-![图表, 折线图  描述已自动生成](file:////Users/chengziyuan/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image005.jpg)
+![b](./res/consonant_b.svg)
 
 Below is a spectrum of the sound of consonant “d”.
 
-![图表, 折线图  描述已自动生成](file:////Users/chengziyuan/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image006.jpg)
+![d](./res/consonant_d.svg)
 
 As can be seen from the figures, the audio will drop significantly from 1000Hz or 2000Hz, and the higher frequency component is noise, so we can use the range of 50-2000Hz as the harmonic speech frequency region.
 
@@ -257,13 +257,11 @@ As can be seen from the figures, the audio will drop significantly from 1000Hz o
 
 ##### Vowel: 
 
-![图表, 折线图  描述已自动生成](file:////Users/chengziyuan/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image007.png) ![图表, 折线图  描述已自动生成](file:////Users/chengziyuan/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image008.png) ![图表, 折线图  描述已自动生成](file:////Users/chengziyuan/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image009.png)
+![vowels](./res/vowels.svg)
 
 ##### Consonant:
 
-
-
-​         ![图表, 折线图  描述已自动生成](file:////Users/chengziyuan/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image010.png) ![图表, 折线图  描述已自动生成](file:////Users/chengziyuan/Library/Group%20Containers/UBF8T346G9.Office/TemporaryItems/msohtmlclip/clip_image011.png)
+![consonants](./res/consonants.svg)
 
 2. The highest vowel peak is further away from the second highest peak, while the consonant peak is closer together.
 
